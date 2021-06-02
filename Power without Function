@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main{
+      public static void main(String[] args){
+            int base, pow, res = 1;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter the base : ");
+            base = sc.nextInt();
+            System.out.print("Enter the power: ");
+            pow = sc.nextInt();
+            System.out.print("The result is: ");
+            for(int i= 1; i<=pow; i++){
+                  res*=base; 
+            }
+            System.out.println(res);
+      }
+}
