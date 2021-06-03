@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main{
+      public static void main(String[] args){
+            int num, rem = 0, res = 0;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter any number: ");
+            num = sc.nextInt();
+            int n = num;
+            System.out.print("The reverse of the number is: ");
+            while(num!=0){
+                  rem = num%10;
+                  res = res*10+rem;
+                  num/=10;
+            }
+            System.out.println(res);
+            if(n==res){
+                  System.out.println("Palindrome");
+            }
+            else{
+                  System.out.println("Not a Palindrome");
+            }
+      }
+}
