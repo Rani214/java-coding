@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main{
+      public static void main(String[] args){
+            int arr[][], row, col, count=0;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter the number of rows in array: ");
+            row = sc.nextInt();
+            System.out.print("Enter the number of coloumns in array: ");
+            col = sc.nextInt();
+            arr = new int[row][col];
+            System.out.print("Enter elements: ");
+            for(int i = 0; i<row; i++){
+                  for(int j =0; j<col; j++){
+                        arr[i][j] = sc.nextInt();
+                  }
+            }
+            System.out.println("The elements are: ");
+            for(int i = 0; i<row; i++){
+                  for(int j = 0; j<col; j++){
+                        System.out.print(arr[i][j]+" ");
+                  }
+                  System.out.println();
+            }
+            int ele;
+            System.out.print("Enter the element whose co-ordinates to be found: ");
+            ele = sc.nextInt();
+            for(int i = 0; i<row; i++){
+                  for(int j =0; j<col; j++){
+                        if(ele== arr[i][j]){
+                              System.out.print("("+i+","+j+")");
+                              count++;
+                              break;
+                        }
+                  }
+            }
+            if(count==0)
+                        System.out.print("(-1,-1)");
+      }
+}
