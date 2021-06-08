@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main{
+      public static void main(String[] args){
+            long n;
+            int count=0;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter the number: ");
+            n = sc.nextInt();
+            int src;
+            System.out.print("Enter the number to find: ");
+            src = sc.nextInt();
+            System.out.print("The occurence of "+src+" in "+n+" is: ");
+            while(n!=0){
+                 int rem = (int)n%10;
+                  if(rem==src)
+                        count++;
+                  
+                  n/=10;
+            }
+            System.out.print(count);
+      }
+}
